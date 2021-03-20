@@ -1,0 +1,324 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>信息收集 | 欢迎来到我的博客</title><meta name="keywords" content="web安全"><meta name="author" content="孤独的上单人,2463006476@qq.com"><meta name="copyright" content="孤独的上单人"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="信息收集简介 在渗透与测试工作中，首先进行的应该就是信息收集， 一是全面统计资产， 二就是知己知彼方能百战不殆。 信息收集的完成度直接关系到我们入侵的成功率，渗透测试中有一门学问叫社会工程学，社工就是和信息收集有关。  针对一个渗透目标的信息收集 收集ip信息  当你有了一个渗透目标，先不要急于去攻击它，找一下它的ip是否是真实ip,  因为现在很多网站为了在全国各地访问的流畅性，通常都做了CDN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="信息收集">
+<meta property="og:url" content="http://example.com/2021/03/20/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/index.html">
+<meta property="og:site_name" content="欢迎来到我的博客">
+<meta property="og:description" content="信息收集简介 在渗透与测试工作中，首先进行的应该就是信息收集， 一是全面统计资产， 二就是知己知彼方能百战不殆。 信息收集的完成度直接关系到我们入侵的成功率，渗透测试中有一门学问叫社会工程学，社工就是和信息收集有关。  针对一个渗透目标的信息收集 收集ip信息  当你有了一个渗透目标，先不要急于去攻击它，找一下它的ip是否是真实ip,  因为现在很多网站为了在全国各地访问的流畅性，通常都做了CDN">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2021-03-20T10:40:54.000Z">
+<meta property="article:modified_time" content="2021-03-20T12:12:22.346Z">
+<meta property="article:author" content="孤独的上单人">
+<meta property="article:tag" content="web安全">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2021/03/20/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 孤独的上单人","link":"链接: ","source":"来源: 欢迎来到我的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-03-20 20:12:22'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/Gallery/"><i class="fa-fw fa fa-picture-o"></i><span> 照片</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">欢迎来到我的博客</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/Gallery/"><i class="fa-fw fa fa-picture-o"></i><span> 照片</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">信息收集</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-03-20T10:40:54.000Z" title="发表于 2021-03-20 18:40:54">2021-03-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-03-20T12:12:22.346Z" title="更新于 2021-03-20 20:12:22">2021-03-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/">信息收集</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<p>在渗透与测试工作中，首先进行的应该就是信息收集，</p>
+<p>一是全面统计资产，</p>
+<p>二就是知己知彼方能百战不殆。</p>
+<p>信息收集的完成度直接关系到我们入侵的成功率，渗透测试中有一门学问叫社会工程学，社工就是和信息收集有关。</p>
+</blockquote>
+<h2 id="针对一个渗透目标的信息收集"><a href="#针对一个渗透目标的信息收集" class="headerlink" title="针对一个渗透目标的信息收集"></a>针对一个渗透目标的信息收集</h2><ul>
+<li><p>收集ip信息</p>
+<blockquote>
+<p>当你有了一个渗透目标，先不要急于去攻击它，找一下它的ip是否是真实ip,  因为现在很多网站为了在全国各地访问的流畅性，通常都做了CDN加速，很可能你ping到的ip不是真实的ip。</p>
+<blockquote>
+<p>怎么验证是否是真实ip呢?</p>
+<p><a target="_blank" rel="noopener" href="http://ping.chinaz.com/">多地ping</a>  服务查看多地ping的地点ip是否一致，如果一致，可能就是，真实ip,如果不一致那就是存在CND加速。</p>
+<p>怎样通过CDN加速找到真实ip呢?</p>
+<p>见我的另一篇  <a href="%E7%BB%95%E8%BF%87cdn%E6%9F%A5%E6%89%BEip.md">绕过cdn的几种方法</a></p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>网站使用的框架，中间件。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://whatweb.bugscaner.com/look/">whatweb</a></p>
+<p><a target="_blank" rel="noopener" href="http://whois.chinaz.com/">whois</a></p>
+<p>whois信息可以获取关键注册人的信息，包括注册商、联系人、联系邮箱、联系电话、创建时间等,可以进行邮箱反查域名，爆破邮箱，社工，域名劫持，寻找旁站等等。</p>
+<p>谷歌插件-wappalyzer,也能收集到很多有用的信息</p>
+<p><a target="_blank" rel="noopener" href="https://www.aizhan.com/">爱站</a></p>
+</blockquote>
+</li>
+<li><p>目标敏感信息</p>
+<blockquote>
+<p>当确定了公司后，我们可以去互联网上查询与该公司有关的任何信息。比如，公司的邮箱格式，公司的员工姓名，以及与该公司有关的任何信息。并且，我们还可以去Github、码云等代码托管平台上查找与此有关的敏感信息，有些粗心的程序员在将代码上传至代码托管平台后，并没有对代码进行脱敏处理。导致上传的代码中有包含如数据库连接信息、邮箱密码、还有可能有泄露的源代码等。<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36119192/article/details/99690742">github搜索</a> </p>
+</blockquote>
+</li>
+<li><p>网站指纹识别</p>
+<blockquote>
+<p>在渗透测试中，对目标服务器进行指纹识别是相当有必要的，因为只有识别出相应的Web容器或者CMS，才能查找与其相关的漏洞，然后才能进行相应的渗透操作。CMS又称整站系统。常见的CMS有：WordPress、Dedecms、Discuz、PhpWeb、PhpWind、Dvbbs、PhpCMS、ECShop、、SiteWeaver、AspCMS、帝国、Z-Blog等。</p>
+<p>常见的网站指纹识别工具有：御剑 等。</p>
+<p>在线指纹识别网站：</p>
+<p>BugScaner：<a target="_blank" rel="noopener" href="http://whatweb.bugscaner.com/look/">http://whatweb.bugscaner.com/look/</a><br>云悉指纹：<a target="_blank" rel="noopener" href="http://www.yunsee.cn/finger.html">http://www.yunsee.cn/finger.html</a><br>WhatWeb：<a target="_blank" rel="noopener" href="https://whatweb.net/">https://whatweb.net/</a></p>
+</blockquote>
+</li>
+<li><p>服务器类型</p>
+<blockquote>
+<p>服务器信息包括服务器用的操作系统：Linux 还是 Windows 。现在企业网站服务器的操作系统有百分之九十以上用的是Linux操作系统。知道了服务器的操作系统之后，还需要知道操作系统使用的具体版本。因为很多低版本的操作系统都存在已知的漏洞。</p>
+<p>判断是Linux还是Windows最简单就是通过ping来探测，Windows的TTL值都是一般是128，Linux则是64。所以大于100的肯定是Windows，而几十的肯定是Linux。但是，通过TTL值来判断服务器类型也不是百分之百准确的，有些windows服务器的TTL值也是几十，而且有的服务器禁止ping。</p>
+<p>而判断目标网站服务器的具体的版本的话，可以采用 nmap 进行扫描， -O 和 -A 参数都能扫描出来</p>
+<p>分享个小技巧:</p>
+<p>域名后面加上index.html  然后和加上inDex.html作对比。</p>
+<p>因为windows对大小写不敏感而linux对大小写敏感，如果一样的话应该是windows，如果不一样的话应该是linux.</p>
+</blockquote>
+</li>
+<li><p>网站容器(Apache/Nginx/Tomcat/IIS)</p>
+<blockquote>
+<p>知道了这些信息之后，我们就需要知道网站用的web服务器是什么类型的：Apache、Nginx、Tomcat 还是 IIS。知道了web服务器是哪种类型后，我们还要探测web服务器具体的版本。比如Ngnix版本&lt;0.83会有解析漏洞 ，IIS6.0会有文件名解析漏洞、IIS7.0会有畸形解析漏洞等。不同的web服务器版本，存在着不同漏洞。</p>
+</blockquote>
+</li>
+<li><p>脚本类型(php/jsp/asp/aspx)</p>
+<blockquote>
+<p>我们需要知道网站用的脚本类型：php 、Jsp 、Asp 、Aspx 。</p>
+<p>1：可以根据网站URL来判断</p>
+<ol start="2">
+<li>谷歌插件-wappalyzer,</li>
+</ol>
+</blockquote>
+</li>
+<li><p>数据库类型(Mysql/Oracle/Accees/Mqlserver)</p>
+<blockquote>
+<p>我们需要知道网站用的是哪种类型的数据库：Mysql、Oracle、SqlServer 还是 Access 。虽然这几种数据库的语法大体上相同，但是还是有区别的。所以我们还是要知道目标网站用的是哪种数据库，并且数据库是哪个版本的.</p>
+<p>几种数据库的区别：</p>
+<p>Access 全名是Microsoft Office Access，是由微软发布的关联式数据库管理系统。小型数据库，当数据库达到100M左右的时候性能就会下降。数据库后缀名： .mdb   一般是asp的网页文件用access数据库<br>SQL Server是由Microsoft开发和推广的关系数据库管理系统（DBMS），是一个比较大型的数据库。端口号为1433。数据库后缀名 .mdf<br>MySQL 是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下产品。MySQL是最流行的关系型数据库管理系统，在 WEB 应用方面MySQL是最好的应用软件之一，MySQL数据库大部分是php的页面。默认端口是3306<br>Oracle又名Oracle RDBMS，或简称Oracle。是甲骨文公司的一款关系数据库管理系统。常用于比较大的网站。默认端口是1521<br>首先，成本上的差距，access是不要钱的，mysql也是开源的，sql server 是收费的一般也就几千，Oracle的费用则数万。其次，处理能力，access支持千以内的访问量，sql server支持几千到上万的访问，而Oracle则支持海量的访 问。再次，从数据库的规模来看，access是小型数据库，，mysql 是中小型数据库，sql server是中型数据库，Oracle是大型数据库。</p>
+<p>常见搭配：</p>
+<p>ASP 和 ASPX：ACCESS、SQL Server<br>PHP：MySQL、PostgreSQL</p>
+<p>JSP：Oracle、MySQL</p>
+</blockquote>
+</li>
+<li><p>网站资产收集</p>
+<blockquote>
+<ul>
+<li>子域名收集</li>
+</ul>
+<blockquote>
+<p>在线子域名收集;</p>
+<p><a target="_blank" rel="noopener" href="https://ip138.com/">https://ip138.com/</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.aizhan.com/cha/">https://www.aizhan.com/cha/</a></p>
+<p><a target="_blank" rel="noopener" href="http://tools.bugscaner.com/subdomain/?domain=www.aizhan.com">http://tools.bugscaner.com/subdomain/?domain=www.aizhan.com</a></p>
+<p>使用google hack 语法也可。</p>
+<p>工具类；</p>
+<p>子域名挖掘机;</p>
+</blockquote>
+<p>+ </p>
+</blockquote>
+</li>
+<li><p>主机端口扫描</p>
+<blockquote>
+<p>需要知道目标服务器开放了哪些端口，常见的如 135 、137 、138 、139 、445，这几个端口经常爆发漏洞。以下是一些服务端口的漏洞：</p>
+<ul>
+<li>22——&gt;ssh弱口令</li>
+<li>873——&gt;rsync 未授权访问漏洞</li>
+<li>3306——&gt;mysql弱口令</li>
+<li>6379——&gt;redis未授权访问漏洞</li>
+</ul>
+</blockquote>
+</li>
+<li><p>网站敏感目录和文件</p>
+<blockquote>
+<p>扫描网站目录结构，看看是否可以遍历目录，或者敏感文件泄漏</p>
+<p>后台目录：弱口令，万能密码，爆破<br>安装包：获取数据库信息，甚至是网站源码<br>上传目录：截断、上传图片马等<br>mysql管理接口：弱口令、爆破，万能密码，然后脱裤，甚至是拿到shell<br>安装页面 ：可以二次安装进而绕过<br>phpinfo：会把你配置的各种信息暴露出来<br>编辑器：fck、ke、等<br>iis短文件利用：条件比较苛刻  windows、apache等<br>提到了网站敏感目录我们就不得不提 robots.txt 文件了.</p>
+<p>robots.txt 文件是专门针对搜索引擎机器人robot 编写的一个纯文本文件。我们可以在这个文件中指定网站中不想被robot访问的目录。这样，我们网站的部分或全部内容就可以不被搜索引擎收录了，或者让搜索引擎只收录指定的内容。因此我们可<br>以利用robots.txt让Google的机器人访问不了我们网站上的重要文件，GoogleHack的威胁也就不存在了.</p>
+<p>虽然robots文件目的是让搜索蜘蛛不爬取想要保护的页面，但是如果我们知道了robots文件的内容的话，我们就可以知道目标网站哪些文件夹不让访问，从侧面说明这些文件夹是很重要的了。</p>
+<p>扫描后台目录的工具: 御剑 </p>
+<p><strong>使用中国菜刀可以把网站的目录结构爬下来进行分析。</strong></p>
+</blockquote>
+</li>
+<li><p>旁站和c段扫描</p>
+<blockquote>
+<p>旁站指的是同一服务器上的其他网站，很多时候，有些网站可能不是那么容易入侵。那么，可以查看该网站所在的服务器上是否还有其他网站。如果有其他网站的话，可以先拿下其他网站的webshell，然后再提权拿到服务器的权限，最后就自然可以拿下该网站了！</p>
+<p>对于红蓝对抗和护网，C段扫描比较有意义。对于单独网站的渗透测试，C段扫描意义不大。C段指的是同一内网段内的其他服务器，每个IP有ABCD四个段，举个例子，192.168.0.1，A段就是192，B段是168，C段是0，D段是1，而C段嗅探的意思就是拿下它同一C段中的其中一台服务器，也就是说是D段1-255中的一台服务器，然后利用工具嗅探拿下该服务器。</p>
+<p>旁站和C段在线查询地址：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.webscan.cc/">http://www.webscan.cc/</a></li>
+</ul>
+</blockquote>
+</li>
+<li><p>网站漏洞扫描</p>
+<blockquote>
+<p>网站漏洞扫描就是直接对网站进行漏洞探测了。网站漏洞扫描也有很多工具。比如 AWVS、AppScan、OWASP-ZAP、nessuss等等。但是需要注意的是，使用漏扫工具直接对网站进行扫描，因为一下子流量过大，有些网站可能会崩溃。所以一般最好不要使用漏洞扫描工具对网站进行扫描。并且如果未经授权就用漏扫对网站进行扫描还是违法的！</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/XRulzmBQbV59nsDpTvmJ2Q">推荐文章</a></p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/XRulzmBQbV59nsDpTvmJ2Q">https://mp.weixin.qq.com/s/XRulzmBQbV59nsDpTvmJ2Q</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:2463006476@qq.com">孤独的上单人</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2021/03/20/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/">http://example.com/2021/03/20/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">欢迎来到我的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/03/20/%E7%BB%95%E8%BF%87CDN%E6%9F%A5%E6%89%BEip/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">绕过CDN查找ip</div></div></a></div><div class="next-post pull-right"><a href="/2021/03/19/%E4%B8%80%E6%AC%A1%E8%A1%A5%E5%A4%A9%E4%B8%93%E5%B1%9Esrc%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">一次补天专属src漏洞挖掘</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">孤独的上单人</div><div class="author-info__description">我的首个博客</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/jinhezai-in" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2463006476@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86"><span class="toc-number">1.</span> <span class="toc-text">信息收集</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%92%88%E5%AF%B9%E4%B8%80%E4%B8%AA%E6%B8%97%E9%80%8F%E7%9B%AE%E6%A0%87%E7%9A%84%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86"><span class="toc-number">1.2.</span> <span class="toc-text">针对一个渗透目标的信息收集</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/03/20/%E7%BB%95%E8%BF%87CDN%E6%9F%A5%E6%89%BEip/" title="绕过CDN查找ip"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="绕过CDN查找ip"/></a><div class="content"><a class="title" href="/2021/03/20/%E7%BB%95%E8%BF%87CDN%E6%9F%A5%E6%89%BEip/" title="绕过CDN查找ip">绕过CDN查找ip</a><time datetime="2021-03-20T11:43:48.000Z" title="发表于 2021-03-20 19:43:48">2021-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/20/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" title="信息收集"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="信息收集"/></a><div class="content"><a class="title" href="/2021/03/20/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" title="信息收集">信息收集</a><time datetime="2021-03-20T10:40:54.000Z" title="发表于 2021-03-20 18:40:54">2021-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/19/%E4%B8%80%E6%AC%A1%E8%A1%A5%E5%A4%A9%E4%B8%93%E5%B1%9Esrc%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98/" title="一次补天专属src漏洞挖掘"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一次补天专属src漏洞挖掘"/></a><div class="content"><a class="title" href="/2021/03/19/%E4%B8%80%E6%AC%A1%E8%A1%A5%E5%A4%A9%E4%B8%93%E5%B1%9Esrc%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98/" title="一次补天专属src漏洞挖掘">一次补天专属src漏洞挖掘</a><time datetime="2021-03-19T11:42:04.000Z" title="发表于 2021-03-19 19:42:04">2021-03-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/19/google%E8%AF%AD%E6%B3%95/" title="google语法"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="google语法"/></a><div class="content"><a class="title" href="/2021/03/19/google%E8%AF%AD%E6%B3%95/" title="google语法">google语法</a><time datetime="2021-03-19T11:18:33.000Z" title="发表于 2021-03-19 19:18:33">2021-03-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/18/namp%E5%B7%A5%E5%85%B7/" title="nmap工具"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="nmap工具"/></a><div class="content"><a class="title" href="/2021/03/18/namp%E5%B7%A5%E5%85%B7/" title="nmap工具">nmap工具</a><time datetime="2021-03-18T08:35:04.000Z" title="发表于 2021-03-18 16:35:04">2021-03-18</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 孤独的上单人</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">欢迎来到对抗路</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk({
+      clientID: '81d312fcbb030d52796f',
+      clientSecret: '68e5d8e5be006c22934468d6b19a96b0b75a0a07',
+      repo: 'jinhezai-in.github.io',
+      owner: 'jinhezai-in',
+      admin: ['jinhezai-in'],
+      id: 'c8110611f88fee6d8fe6f58c64ad770b',
+      language: 'zh-CN',
+      perPage: 10,
+      distractionFreeMode: false,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      updateCountCallback: commentCount
+    })
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !true) {
+  if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
