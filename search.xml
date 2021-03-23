@@ -36,19 +36,6 @@
     
     
     <entry>
-      <title>一次补天专属src漏洞挖掘</title>
-      <link href="2021/03/19/%E4%B8%80%E6%AC%A1%E8%A1%A5%E5%A4%A9%E4%B8%93%E5%B1%9Esrc%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98/"/>
-      <url>2021/03/19/%E4%B8%80%E6%AC%A1%E8%A1%A5%E5%A4%A9%E4%B8%93%E5%B1%9Esrc%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98/</url>
-      
-        <content type="html"><![CDATA[<h1 id="一次补天专属src漏洞挖掘"><a href="#一次补天专属src漏洞挖掘" class="headerlink" title="一次补天专属src漏洞挖掘"></a>一次补天专属src漏洞挖掘</h1><h1 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h1><blockquote><p>目标:<a href="https://www.sdada.edu.cn/">https://www.sdada.edu.cn/</a></p></blockquote><ul><li><p>查找ip</p><blockquote><p><a href="http://ping.chinaz.com/">多地ping</a></p><p>使用多地ping网站进行cdn测试，发现该网站多地ping的ip一样，不存在CDN加速。、</p><p>124.128.249.249 是它的ip</p></blockquote></li></ul><blockquote><p>JavaScript Frameworks:<strong>jQuery</strong></p><p>JavaScript Libraries:<strong>Slick</strong></p><p>Server: VWebServer</p><p>nginx: Web</p></blockquote><ul><li><p>子域名</p><blockquote><table><thead><tr><th align="left">0</th><th align="center">19.sdada.edu.cn</th></tr></thead><tbody><tr><td align="left">1</td><td align="center">anxinfu.sdada.edu.cn</td></tr><tr><td align="left">2</td><td align="center">art.sdada.edu.cn</td></tr><tr><td align="left">3</td><td align="center">bwcxljsm.sdada.edu.cn</td></tr><tr><td align="left">4</td><td align="center">hum.sdada.edu.cn</td></tr><tr><td align="left">5</td><td align="center">ids.sdada.edu.cn</td></tr><tr><td align="left">6</td><td align="center">jy.sdada.edu.cn</td></tr><tr><td align="left">7</td><td align="center">live.sdada.edu.cn</td></tr><tr><td align="left">8</td><td align="center">m.sdada.edu.cn</td></tr><tr><td align="left">9</td><td align="center">mda.sdada.edu.cn</td></tr><tr><td align="left">10</td><td align="center">sdada.edu.cn</td></tr><tr><td align="left"></td><td align="center"></td></tr><tr><td align="left">12</td><td align="center">upload.sdada.edu.cn</td></tr><tr><td align="left">13</td><td align="center">wap.sdada.edu.cn</td></tr><tr><td align="left">14</td><td align="center"><a href="http://www.sdada.edu.cn/">www.sdada.edu.cn</a></td></tr><tr><td align="left">15</td><td align="center">xcb.sdada.edu.cn</td></tr><tr><td align="left">16</td><td align="center">xxfy.sdada.edu.cn</td></tr><tr><td align="left">17</td><td align="center">zs.sdada.edu.cn</td></tr></tbody></table></blockquote><blockquote><p><a href="https://chaziyu.com/sdada.edu.cn/">更多子域名</a></p></blockquote></li></ul>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>google语法</title>
       <link href="2021/03/19/google%E8%AF%AD%E6%B3%95/"/>
       <url>2021/03/19/google%E8%AF%AD%E6%B3%95/</url>
